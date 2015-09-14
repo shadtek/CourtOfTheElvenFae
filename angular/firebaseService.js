@@ -1,4 +1,4 @@
-var app = angular.module('utahrenfaire');
+var app = angular.module('cotef');
 
 app.service('firebaseService', function ($firebase, $firebaseObject, $firebaseArray) {
   var firebaseUrl = 'https://cotef.firebaseio.com/';
