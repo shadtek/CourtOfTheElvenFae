@@ -8,20 +8,30 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: "states/home/home.html",
       controller: 'homeCtrl',
       resolve: {
-        mainInfoRef: function(firebaseService){
-          return firebaseService.getMainInfo();
+        homeRef: function(firebaseService){
+          return firebaseService.getHome();
         }
       }
     })
     .state('about', {
       url: "/about",
-      templateUrl: "states/about.html",
-      controller: "aboutCtrl"
+      templateUrl: "states/about/about.html",
+      controller: "aboutCtrl",
+      resolve: {
+        aboutRef: function(firebaseService){
+          return firebaseService.getAbout();
+        }
+      }
     })
     .state('booking', {
       url: "/booking",
       templateUrl: "states/booking/booking.html",
-      controller: 'bookingCtrl'
+      controller: 'bookingCtrl',
+      resolve: {
+        boookingRef: function(firebaseService){
+          return firebaseService.getBooking();
+        }
+      }
     })
     .state('profiles', {
       url: "/profiles",
@@ -30,6 +40,16 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       resolve: {
         profilesRef: function(firebaseService){
           return firebaseService.getProfiles();
+        }
+      }
+    })
+    .state('calendar', {
+      url: "/calendar",
+      templateUrl: "states/calendar/calendar.html",
+      controller: 'calendarCtrl',
+      resolve: {
+        profilesRef: function(firebaseService){
+          return firebaseService.getCalendar();
         }
       }
     })
@@ -60,8 +80,34 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         loggedIn: function(authService){
           return authService.checkAuth();
         },
-        mainInfoRef: function(firebaseService, $state){
-          return firebaseService.getMainInfo();
+        homeRef: function(firebaseService, $state){
+          return firebaseService.getHome();
+        }
+      }
+    })
+    .state('admin.edits.aboutEdits', {
+      url: "/about-edits",
+      templateUrl: "states/admin/aboutEdits/aboutEdits.html",
+      controller: 'aboutEditsCtrl',
+      resolve: {
+        loggedIn: function(authService){
+          return authService.checkAuth();
+        },
+        aboutRef: function(firebaseService, $state){
+        return firebaseService.getAbout();
+        }
+      }
+    })
+    .state('admin.edits.bookingEdits', {
+      url: "/booking-edits",
+      templateUrl: "states/admin/bookingEdits/bookingEdits.html",
+      controller: 'bookingEditsCtrl',
+      resolve: {
+        loggedIn: function(authService){
+          return authService.checkAuth();
+        },
+        bookingRef: function(firebaseService, $state){
+        return firebaseService.getBooking();
         }
       }
     })
@@ -75,6 +121,19 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         },
         profilesRef: function(firebaseService, $state){
         return firebaseService.getProfiles();
+        }
+      }
+    })
+    .state('admin.edits.calendarEdits', {
+      url: "/calendar-edits",
+      templateUrl: "states/admin/calendarEdits/calendarEdits.html",
+      controller: 'calendarEditsCtrl',
+      resolve: {
+        loggedIn: function(authService){
+          return authService.checkAuth();
+        },
+        calendarRef: function(firebaseService, $state){
+        return firebaseService.getCalendar();
         }
       }
     })
