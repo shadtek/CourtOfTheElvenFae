@@ -28,7 +28,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: "states/booking/booking.html",
       controller: 'bookingCtrl',
       resolve: {
-        boookingRef: function(firebaseService){
+        bookingRef: function(firebaseService){
           return firebaseService.getBooking();
         }
       }

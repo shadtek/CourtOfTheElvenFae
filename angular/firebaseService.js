@@ -16,15 +16,15 @@ app.service('firebaseService', function ($firebase, $firebaseObject, $firebaseAr
   };
 
   this.getBooking = function() {
-    return $firebaseArray(new Firebase(firebaseUrl + 'booking'));
+    return $firebaseObject(new Firebase(firebaseUrl + 'booking'));
   };
 
   this.getProfiles = function() {
-    return $firebaseObject(new Firebase(firebaseUrl + 'profiles'));
+    return $firebaseArray(new Firebase(firebaseUrl + 'profiles'));
   };
 
   this.getCalendar = function() {
-    return $firebaseArray(new Firebase(firebaseUrl + 'calendar'));
+    return $firebaseObject(new Firebase(firebaseUrl + 'calendar'));
   };
 
 

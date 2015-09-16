@@ -5,5 +5,4 @@ app.controller('aboutCtrl', function($scope, firebaseService, aboutRef) {
 
 	$scope.about = aboutRef;
 
-
 })
