@@ -6,20 +6,28 @@
 	<link href="main.css" rel="stylesheet">
 </head>
 <body>
-  <div class="home-link">
-    <a ui-sref="home">
-      <h1>The Court of the Elven Fae</h1>
-    </a>
-  </div>
-  <div class="nav">
-    <ul class="pull-right">
-      <li><a ui-sref="about">About</a></li>
-      <li><a ui-sref="booking">Booking</a></li>
-      <li><a ui-sref="profiles">Profiles</a></li>
-      <li><a ui-sref="Calendar">Calendar</a></li>
+  <header>
+    <div class="home-link">
+      <a ui-sref="home">
+        <h1>The Court of the Elven Fae</h1>
+      </a>
+    </div>
+    <div class="nav">
+      <ul class="pull-right">
+        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="booking">Booking</a></li>
+        <li><a ui-sref="profiles">Profiles</a></li>
+        <li><a ui-sref="calendar">Calendar</a></li>
+      </ul>
+    </div>
+  </header>
+  <ui-view></ui-view>
+  <footer>
+    <ul>
+      <li>© The Court of the Elven Fae 2015</li>
+      <li><a href="https://www.linkedin.com/in/shadtek" target="_blank">Site by Shadtek</a></li>
     </ul>
-  </div>
-
+  </footer>
 
 <!-- Index body end -->
 	<!-- Angular and Dependencies -->
