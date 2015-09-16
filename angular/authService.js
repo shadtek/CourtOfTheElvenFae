@@ -2,7 +2,7 @@ var app = angular.module('cotef');
 
 app.service('authService', function($firebaseAuth, $q){
   //$locationProvider
-  var firebaseUrl = 'https://cotef.firebaseio.com/'
+  var firebaseUrl = 'https://courtoftheelvenfae.firebaseio.com/'
 
   var fbRef = new Firebase(firebaseUrl);
 
