@@ -12,7 +12,7 @@ app.service('firebaseService', function ($firebase, $firebaseObject, $firebaseAr
   };
 
   this.getAbout = function() {
-    return $firebaseArray(new Firebase(firebaseUrl + 'about'));
+    return $firebaseObject(new Firebase(firebaseUrl + 'about'));
   };
 
   this.getBooking = function() {
