@@ -7,6 +7,10 @@ app.service('firebaseService', function ($firebase, $firebaseObject, $firebaseAr
     return $firebaseObject(new Firebase(firebaseUrl + 'users/' + userId));
   };
 
+  this.getMain = function() {
+    return $firebaseObject(new Firebase(firebaseUrl + 'main'));
+  };
+
   this.getHome = function() {
   	return $firebaseObject(new Firebase(firebaseUrl + 'home'));
   };

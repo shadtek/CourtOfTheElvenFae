@@ -3,33 +3,10 @@
 <head>
 	<base href="/"></base>
 	<title>The Court of the Elven Fae</title>
-	<link href="main.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
 </head>
-<body ng-controller="mainCtrl">
-  <header>
-    <div class="home-link">
-      <a ui-sref="home">
-        <h1>The Court of the Elven Fae</h1>
-      </a>
-    </div>
-    <div class="nav">
-      <ul class="pull-right">
-        <li><a ui-sref="about">About</a></li>
-        <li><a ui-sref="booking">Booking</a></li>
-        <li><a ui-sref="profiles">Profiles</a></li>
-        <li><a ui-sref="calendar">Calendar</a></li>
-      </ul>
-    </div>
-  </header>
+<body ng-controller="cotefCtrl">
   <ui-view></ui-view>
-  <footer>
-    <ul>
-      <li>© The Court of the Elven Fae 2015</li>
-      <li><a href="https://www.linkedin.com/in/shadtek" target="_blank">Site by Shadtek</a></li>
-    </ul>
-  </footer>
-
-<!-- Index body end -->
 	<!-- Angular and Dependencies -->
   <script src="angular/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
@@ -39,7 +16,8 @@
   <!-- App Init -->
   <script src='angular/app.js'></script>
   <!-- Controllers -->
-  <script src='angular/mainCtrl.js'></script>
+  <script src='angular/cotefCtrl.js'></script>
+  <script src='states/mainCtrl.js'></script>
   <script src='states/about/aboutCtrl.js'></script>
   <script src='states/booking/bookingCtrl.js'></script>
   <script src='states/calendar/calendarCtrl.js'></script>
@@ -54,7 +32,7 @@
   <script src='states/admin/login/loginCtrl.js'></script>
   <script src='states/admin/logoutCtrl.js'></script>
   <!-- Services -->
-  <script src='angular/mainService.js'></script>
+  <script src='angular/cotefService.js'></script>
   <script src='angular/authService.js'></script>
   <script src='angular/firebaseService.js'></script>
 </body>

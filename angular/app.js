@@ -3,6 +3,18 @@ var app = angular.module('cotef', ['ui.router', 'firebase']);
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
+    .state('main', {
+      url: "",
+      templateUrl: "states/main.html",
+      controller: 'mainCtrl',
+      abstract: true,
+      resolve: {
+        mainRef: function(firebaseService){
+          return firebaseService.getMain();
+        }
+      }
+
+    })
     .state('home', {
       url: "/",
       templateUrl: "states/home/home.html",
