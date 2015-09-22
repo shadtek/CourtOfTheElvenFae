@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="cotef">
+<html lang='en' ng-app='cotef'>
 <head>
-	<base href="/"></base>
+	<base href='/'></base>
 	<title>The Court of the Elven Fae</title>
-	<link href="styles.css" rel="stylesheet">
+  <link href='css/bootstrap.css' rel='stylesheet'>
 </head>
-<body ng-controller="cotefCtrl">
+<body ng-controller='cotefCtrl'>
   <ui-view></ui-view>
+  <!-- jQuery -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <!-- Bootstrap -->
+  <script src='angular/angular.js'></script>
 	<!-- Angular and Dependencies -->
-  <script src="angular/angular.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <script src='angular/angular.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js'></script>
   <!-- Firebase and Dependencies -->
-  <script src="https://cdn.firebase.com/js/client/2.2.5/firebase.js"></script>
-  <script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.5/firebase.js'></script>
+  <script src='https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js'></script>
   <!-- App Init -->
   <script src='angular/app.js'></script>
   <!-- Controllers -->

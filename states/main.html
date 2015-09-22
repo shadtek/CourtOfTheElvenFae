@@ -1,25 +1,67 @@
-<div ng-style="{'background-image': 'url(' + main.mainBackground + ')'}">
-  <header>
-    <div class="home-link">
-      <a ui-sref="main.home">
-        <h1>The Court of the Elven Fae</h1>
-      </a>
+<!-- Break me up later. Use me as the home page for now. -->
+<div class="container-fluid" ng-style="{'background': 'url(' + main.mainBackground + ') no-repeat center center fixed'}">
+  <div class="container">
+    <div class="col-md-12">
+      <h1>The Court of the Elven Fae</h1>
     </div>
-    <div class="nav">
-      <ul class="pull-right">
-        <li><a ui-sref="main.about">About</a></li>
-        <li><a ui-sref="main.booking">Booking</a></li>
-        <li><a ui-sref="main.profiles">Profiles</a></li>
-        <li><a ui-sref="main.calendar">Calendar</a></li>
-      </ul>
+    <div class="col-md-6"> 
+      <h2>The best court of faeries ever!</h2>
+      <p>Cat ipsum dolor sit amet, siberian. Kitty balinese russian blue and leopard.</p>
+      <button type='button'>Book Us</button>
+      <button type='button'>Calendar</button>
     </div>
-  </header>
-    <ui-view></ui-view>
-  <footer>
-    <ul>
-      <li>© The Court of the Elven Fae 2015</li>
-      <li>Admin</li>
-      <li><a href="https://www.linkedin.com/in/shadtek" target="_blank">Site by Shadtek</a></li>
-    </ul>
-  </footer>
+    <div class="col-md-6">
+      <img src="http://placekitten.com/408/287" alt="Fae Court">
+    </div>
+    <div class="col-md-4">
+      <h3>Book Us</h3>
+      <p> Ocelot tomcat. Cornish rex devonshire rex and grimalkin or mouser lion. Devonshire rex manx mouser, burmese grimalkin. Tomcat tiger, kitty for lynx.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Profiles</h3>
+      <p>Scottish fold donskoy yet malkin kitten and puma. American shorthair ocicat yet thai kitten, persian, burmese yet persian.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>Calendar</h3>
+      <p>Mouser norwegian forest yet himalayan and siberian kitten but mouser. Cheetah devonshire rex siberian.</p>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Code storage:
+
+<div ng-style="{'background': 'url(' + main.mainBackground + ') no-repeat center center fixed'}"></div>
+
+<header>
+  <a ui-sref="main.home">
+    <h1>The Court of the Elven Fae</h1>
+  </a>
+  <ul>
+    <li><a ui-sref="main.about">About</a></li>
+    <li><a ui-sref="main.booking">Booking</a></li>
+    <li><a ui-sref="main.profiles">Profiles</a></li>
+    <li><a ui-sref="main.calendar">Calendar</a></li>
+  </ul>
+</header>
+<ui-view></ui-view>
+<footer>
+  <ul>
+    <li>© The Court of the Elven Fae 2015</li>
+    <li>Admin</li>
+    <li><a href="https://www.linkedin.com/in/shadtek" target="_blank">Site by Shadtek</a></li>
+  </ul>
+</footer>
+
+ -->

@@ -60,7 +60,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: "states/calendar/calendar.html",
       controller: 'calendarCtrl',
       resolve: {
-        profilesRef: function(firebaseService){
+        calendarRef: function(firebaseService){
           return firebaseService.getCalendar();
         }
       }
