@@ -3,19 +3,7 @@ var app = angular.module('cotef', ['ui.router', 'firebase']);
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
-    .state('main', {
-      url: "",
-      templateUrl: "states/main.html",
-      controller: 'mainCtrl',
-      abstract: true,
-      resolve: {
-        mainRef: function(firebaseService){
-          return firebaseService.getMain();
-        }
-      }
-
-    })
-    .state('main.home', {
+      .state('home', {
       url: "/",
       templateUrl: "states/home/home.html",
       controller: 'homeCtrl',
@@ -25,7 +13,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
-    .state('main.about', {
+    .state('about', {
       url: "/about",
       templateUrl: "states/about/about.html",
       controller: "aboutCtrl",
@@ -35,7 +23,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
-    .state('main.booking', {
+    .state('booking', {
       url: "/booking",
       templateUrl: "states/booking/booking.html",
       controller: 'bookingCtrl',
@@ -45,7 +33,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
-    .state('main.profiles', {
+    .state('profiles', {
       url: "/profiles",
       templateUrl: "states/profiles/profiles.html",
       controller: 'profilesCtrl',
@@ -55,7 +43,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
-    .state('main.calendar', {
+    .state('calendar', {
       url: "/calendar",
       templateUrl: "states/calendar/calendar.html",
       controller: 'calendarCtrl',
@@ -66,25 +54,25 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       }
     })
     //Just the Admin header.
-    .state('main.admin', {
+    .state('admin', {
       url: "",
       templateUrl: "states/admin/admin.html",
       abstract: true
     })
     //Login view
-    .state('main.admin.login', {
+    .state('admin.login', {
       url: "/login",
       templateUrl: "states/admin/login/login.html",
       controller: 'loginCtrl'
     })
     //Where the edit nav buttons are held
-    .state('main.admin.edits', {
+    .state('admin.edits', {
       url: "",
       templateUrl: "states/admin/edits.html",
       controller: 'logoutCtrl',
       abstract: true
     })
-    .state('main.admin.edits.homeEdits', {
+    .state('admin.edits.homeEdits', {
       url: "/home-edits",
       templateUrl: "states/admin/homeEdits/homeEdits.html",
       controller: 'homeEditsCtrl',
@@ -97,7 +85,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
-    .state('main.admin.edits.aboutEdits', {
+    .state('admin.edits.aboutEdits', {
       url: "/about-edits",
       templateUrl: "states/admin/aboutEdits/aboutEdits.html",
       controller: 'aboutEditsCtrl',
@@ -110,7 +98,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
-    .state('main.admin.edits.bookingEdits', {
+    .state('admin.edits.bookingEdits', {
       url: "/booking-edits",
       templateUrl: "states/admin/bookingEdits/bookingEdits.html",
       controller: 'bookingEditsCtrl',
@@ -123,7 +111,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
-    .state('main.admin.edits.profilesEdits', {
+    .state('admin.edits.profilesEdits', {
       url: "/profiles-edits",
       templateUrl: "states/admin/profilesEdits/profilesEdits.html",
       controller: 'profilesEditsCtrl',
@@ -136,7 +124,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
-    .state('main.admin.edits.calendarEdits', {
+    .state('admin.edits.calendarEdits', {
       url: "/calendar-edits",
       templateUrl: "states/admin/calendarEdits/calendarEdits.html",
       controller: 'calendarEditsCtrl',

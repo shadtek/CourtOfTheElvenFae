@@ -2,3 +2,7 @@
 .features .glyphicon {
 	font-size: 32px;
 }
+
+html,body {
+	background: url(http://i.imgur.com/RNR0mnI.jpg) no-repeat center center fixed !important;
+}
