@@ -6,5 +6,4 @@ The files are served up using this repo: https://github.com/shadtek/static-serve
 
 
 Outstanding issues to be fixed: 
-1. Dynamic background is too dynamic.
-2. Footer isn't footing.
+1. Footer isn't footing.
