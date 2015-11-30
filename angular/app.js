@@ -58,6 +58,19 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
+    .state('admin.edits.profilesEdits', {
+      url: "/profiles-edits",
+      templateUrl: "states/admin/profilesEdits/profilesEdits.html",
+      controller: 'profilesEditsCtrl',
+      resolve: {
+        loggedIn: function(authService){
+          return authService.checkAuth();
+        },
+        profilesRef: function(firebaseService, $state){
+          return firebaseService.getProfiles();
+        }
+      }
+    })
     // For any unmatched url, redirect to "/"
     .state('otherwise', {
     url: '*path',

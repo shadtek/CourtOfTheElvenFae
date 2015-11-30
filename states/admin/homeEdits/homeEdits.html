@@ -1,5 +1,10 @@
 <h3>Home Edits</h3>
 <form ng-submit="updateMainInfo()">
+  <input ng-model="mainInfo.profiles.name" />
+  <button class="btn-mini">Update</button>
+  <span>Name</span>
+</form>
+<form ng-submit="updateMainInfo()">
   <input ng-model="mainInfo.slogan" />
   <button class="btn-mini">Update</button>
   <span>Slogan</span>
