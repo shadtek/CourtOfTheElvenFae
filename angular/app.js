@@ -7,6 +7,21 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       url: "/",
       templateUrl: "states/home/home.html",
       controller: 'homeCtrl',
+      views: {
+        "": {
+          templateUrl: "states/home/home.html",
+          controller: 'homeCtrl'
+        },
+        "court@home": {
+          templateUrl: "states/home/court.html",
+          controller: 'courtCtrl',
+          resolve: {
+            profilesRef: function(firebaseService, $state){
+              return firebaseService.getProfiles();
+            }
+          }
+        }
+      },
       resolve: {
         mainInfoRef: function(firebaseService){
           return firebaseService.getMainInfo();
