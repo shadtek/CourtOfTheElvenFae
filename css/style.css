@@ -789,3 +789,9 @@ Parallax
 	}
 	
 }
+
+/* Overrides for admin edits */
+
+input, textarea {
+  width: 500px;
+}
