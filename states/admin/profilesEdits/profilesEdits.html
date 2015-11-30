@@ -4,10 +4,9 @@
   <div class="flex flex-between">
     <div class="flex flex-column input-boxes">
       <input ng-model="item.name" placeholder="Name"/>
-      <input ng-model="item.photo" placeholder="Photo URL"/>
+      <input ng-model="item.photo" placeholder="Photo URL (300px by 300px is optimal)"/>
       <div class="thumbnail"><img src={{item.photo}} /></div>
       <textarea ng-model="item.description" rows="4" placeholder="Description"></textarea>
-      <input ng-model="item.website" placeholder="Website"/>
     </div>
     <div>
       <button class="btn-mini btn-info" ng-click="addProfiles(item)">Add New</button>
@@ -19,10 +18,9 @@
   <div ng-repeat="item in profiles track by item.name" class="flex flex-between">
     <div class="flex flex-column input-boxes">
       <input ng-model="item.name" placeholder="Name"/>
-      <input ng-model="item.photo" placeholder="Photo URL"/>
+      <input ng-model="item.photo" placeholder="Photo URL (300px by 300px is optimal)"/>
       <div class="thumbnail"><img src={{item.photo}} /></div>
       <textarea  ng-model="item.description" rows="4" placeholder="Description"></textarea>
-      <input ng-model="item.website" placeholder="Website"/>
     </div>
     <div>
       <button class="btn-mini btn-success" ng-click="updateProfiles(item)">Update</button>

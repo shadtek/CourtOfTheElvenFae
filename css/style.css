@@ -824,3 +824,9 @@ input, textarea {
   width: 100px;
   overflow: hidden;
 }
+
+/* Overrides for the court */
+
+.flex.member {
+  flex-grow: 6;
+}

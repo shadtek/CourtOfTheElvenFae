@@ -23,96 +23,20 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-6 col-sm-3 col-md-3">
+      <!-- Start Repeat -->
+      <div ng-show="!item.hide" ng-repeat="item in profiles track by item.name" class="col-xs-6 col-sm-3 col-md-3">
         <div class="wow bounceInUp" data-wow-delay="0.2s">
           <div class="team boxed-grey">
             <div class="inner">
-              <h5>MerFairy Queen Kailania</h5>
-              <p class="subtitle">Both fairy and mermaid, she is the leader of this group of magical creatures</p>
-              <div class="avatar"><img src="img/team/image1.jpg" alt="" class="img-responsive img-circle" /></div>
+              <h5>{{item.name}}</h5>
+              <p class="subtitle">{{item.description}}</p>
+              <div class="avatar"><img src={{item.photo}} alt="" class="img-responsive img-circle" /></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="wow bounceInUp" data-wow-delay="0.5s">
-          <div class="team boxed-grey">
-            <div class="inner">
-              <h5>Lord Jareth</h5>
-              <p class="subtitle">Reigning king to Kailania</p>
-              <div class="avatar"><img src="img/team/image2.jpg" alt="" class="img-responsive img-circle" /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="wow bounceInUp" data-wow-delay="0.8s">
-          <div class="team boxed-grey">
-            <div class="inner">
-              <h5>Princess Arianna</h5>
-              <p class="subtitle">Rose Fairy</p>
-              <div class="avatar"><img src="img/team/image3.jpg" alt="" class="img-responsive img-circle" /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="wow bounceInUp" data-wow-delay="1s">
-          <div class="team boxed-grey">
-            <div class="inner">
-              <h5>Princess Raina</h5>
-              <p class="subtitle">DewDrop Fairy</p>
-              <div class="avatar"><img src="img/team/image4.jpg" alt="" class="img-responsive img-circle" /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="wow bounceInUp" data-wow-delay="0.2s">
-          <div class="team boxed-grey">
-            <div class="inner">
-              <h5>Whisper</h5>
-              <p class="subtitle">Playful Royal Satyr</p>
-              <div class="avatar"><img src="img/team/image6.jpg" alt="" class="img-responsive img-circle" /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="wow bounceInUp" data-wow-delay="0.5s">
-          <div class="team boxed-grey">
-            <div class="inner">
-              <h5>The Royal Bard</h5>
-              <p class="subtitle">and the indentured servant, Rask the Rogue</p>
-              <div class="avatar"><img src="img/team/image7.jpg" alt="" class="img-responsive img-circle" /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="wow bounceInUp" data-wow-delay="0.8s">
-          <div class="team boxed-grey">
-            <div class="inner">
-              <h5>Anastasia</h5>
-              <p class="subtitle">Queen Phoenix</p>
-              <div class="avatar"><img src="img/team/image8.jpg" alt="" class="img-responsive img-circle" /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">
-        <div class="wow bounceInUp" data-wow-delay="1s">
-          <div class="team boxed-grey">
-            <div class="inner">
-              <h5>Princess Fana</h5>
-              <p class="subtitle">the Bubbles Fairy</p>
-              <div class="avatar"><img src="img/team/image5.jpg" alt="" class="img-responsive img-circle" /></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="clearfix"></div>
+      <!-- End Repeat -->
     </div> 
   </div>
 </section>
