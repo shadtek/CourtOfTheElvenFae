@@ -45,6 +45,19 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         }
       }
     })
+    .state('admin.edits.contactEdits', {
+      url: "/contact-edits",
+      templateUrl: "states/admin/contactEdits/contactEdits.html",
+      controller: 'contactEditsCtrl',
+      resolve: {
+        loggedIn: function(authService){
+          return authService.checkAuth();
+        },
+        mainInfoRef: function(firebaseService, $state){
+          return firebaseService.getMainInfo();
+        }
+      }
+    })
     // For any unmatched url, redirect to "/"
     .state('otherwise', {
     url: '*path',
