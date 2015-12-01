@@ -20,6 +20,9 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
               return firebaseService.getProfiles();
             }
           }
+        },
+        "calendar@home": {
+          templateUrl: "states/home/calendar.html"
         }
       },
       resolve: {
