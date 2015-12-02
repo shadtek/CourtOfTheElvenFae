@@ -1,0 +1,51 @@
+<h2>Our Calendar</h2>
+
+<!-- Section: calendar -->
+<section id="calendar" class="home-section text-center">
+  <div class="heading-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>OUR CALENDAR OF EVENTS</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-50">
+      </div>
+    </div>
+    <div class="row">
+      <!-- Start Repeat -->
+      <div ng-show="!item.hide" ng-repeat="item in profiles track by item.name" class="col-xs-6 col-sm-3 col-md-3">
+        <div class="wow bounceInUp" data-wow-delay="0.2s">
+          <div class="team boxed-grey">
+            <div class="inner">
+              <h5>{{item.name}}</h5>
+              <p class="subtitle">{{item.description}}</p>
+              <div class="avatar"><img src={{item.photo}} alt="" class="img-responsive img-circle" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <!-- End Repeat -->
+    </div> 
+  </div>
+</section>
+<!-- /Section: calendar -->
+
+
+
+
+
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=pm3a4iuenakh1cp9mavaft3k8c%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FDenver" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>

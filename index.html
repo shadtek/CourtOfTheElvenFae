@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cotef">
+
+<head>
+	<base href="/"></base>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Court of the Elven Fae</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" />
+  <!-- Squad theme CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="color/default.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="mainCtrl" cz-shortcut-listen="true" id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	<a rel="#top"></a>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="load"></div>
+  </div>
+
+  <ui-view></ui-view>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <p>&copy;Copyright 2015 - Court of the Elven Fae. All rights reserved.</p>
+          <a ui-sref="admin.login"><i class="fa fa-2x fa-cog"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/wow.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="js/custom.js"></script>
+    <!-- Angular and Dependencies -->
+  <script src="angular/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <!-- Firebase and Dependencies -->
+  <script src="https://cdn.firebase.com/js/client/2.2.5/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+  <!-- App Init -->
+  <script src='angular/app.js'></script>
+  <!-- Controllers -->
+  <script src='angular/mainCtrl.js'></script>
+  <script src='states/home/homeCtrl.js'></script>
+  <script src='states/home/courtCtrl.js'></script>
+  <script src='states/admin/login/loginCtrl.js'></script>
+  <script src='states/admin/homeEdits/homeEditsCtrl.js'></script>
+  <script src='states/admin/contactEdits/contactEditsCtrl.js'></script>
+  <script src='states/admin/profilesEdits/profilesEditsCtrl.js'></script>
+  <!-- Logout Controller -->
+  <script src='states/admin/logoutCtrl.js'></script>
+  <!-- Services -->
+  <script src='angular/mainService.js'></script>
+  <script src='angular/authService.js'></script>
+  <script src='angular/firebaseService.js'></script>
+</body>
+
+</html>

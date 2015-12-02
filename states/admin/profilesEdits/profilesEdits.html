@@ -1,0 +1,35 @@
+<h2>Profiles Edits</h2>
+<div class="flex edit-container">
+  <!-- Start Add -->
+  <div class="flex flex-between">
+    <div class="flex flex-column input-boxes">
+      <input ng-model="item.name" placeholder="Name"/>
+      <input ng-model="item.photo" placeholder="Photo URL (300px by 300px is optimal)"/>
+      <div class="thumbnail"><img src={{item.photo}} /></div>
+      <textarea ng-model="item.description" rows="4" placeholder="Description"></textarea>
+    </div>
+    <div>
+      <button class="btn-mini btn-info" ng-click="addProfiles(item)">Add New</button>
+    </div>
+  </div>
+  <br>
+  <!-- End Add -->
+  <!-- Start Repeat -->
+  <div ng-repeat="item in profiles track by item.name" class="flex flex-between">
+    <div class="flex flex-column input-boxes">
+      <input ng-model="item.name" placeholder="Name"/>
+      <input ng-model="item.photo" placeholder="Photo URL (300px by 300px is optimal)"/>
+      <div class="thumbnail"><img src={{item.photo}} /></div>
+      <textarea  ng-model="item.description" rows="4" placeholder="Description"></textarea>
+    </div>
+    <div>
+      <button class="btn-mini btn-success" ng-click="updateProfiles(item)">Update</button>
+      <button class="btn-mini btn-warning" ng-click="toggleProfilesHide(item)">Hide</button>
+      <button class="btn-mini btn-danger" ng-click="removeProfiles(item)">Delete</button>
+      <h3 ng-hide="!item.hide">Hidden</h3>
+      <p ng-hide="item.hide">Shown</p>
+    </div>
+  </div>
+  <br>
+  <!-- End Repeat -->
+</div>
