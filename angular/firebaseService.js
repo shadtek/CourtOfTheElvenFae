@@ -14,5 +14,4 @@ app.service('firebaseService', function ($firebase, $firebaseObject, $firebaseAr
   this.getProfiles = function() {
   	return $firebaseArray(new Firebase(firebaseUrl + 'profiles'));
   };
-
 })

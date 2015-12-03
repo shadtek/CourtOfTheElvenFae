@@ -10,4 +10,10 @@ app.controller('homeEditsCtrl', function($scope, mainInfoRef, firebaseService){
     $scope.mainInfo.$save();
   };
 
+  // $scope.toggleMainInfoHide = function(item){
+  //   item.hide = !item.hide;
+  //   $scope.mainInfo.$save(item);
+  //   console.log("Hide Toggled")
+  // };
+
 });

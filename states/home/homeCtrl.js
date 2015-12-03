@@ -5,4 +5,6 @@ app.controller('homeCtrl', function($scope, firebaseService, mainInfoRef) {
 	
 	$scope.mainInfo = mainInfoRef;
 
+	
+
 })

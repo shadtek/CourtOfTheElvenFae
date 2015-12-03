@@ -25,12 +25,12 @@
 </nav>
 
 <section id="intro" class="intro">
-
   <div class="slogan">
     <h2>Court of the Elven Fae</h2>
     <h4>{{mainInfo.slogan}}</h4>
-    <a class="btn btn-lg bg-info" ng-href="{{mainInfo.callToActionUrl}}" target="_blank">{{mainInfo.callToActionText}}</a>
-
+    <a class="btn btn-lg bg-info" ng-href="{{mainInfo.callToAction.url}}" target="_blank">{{mainInfo.callToAction.text}}</a>
+    <!-- Hide this button when admin clicks in backend with this code? 
+    ng-show="!{{mainInfo.callToAction.hide}}" -->
   </div>
   <div class="page-scroll">
     <a href="#about" class="btn btn-circle">
