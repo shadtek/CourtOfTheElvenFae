@@ -7,6 +7,7 @@
           <div class="wow bounceInDown" data-wow-delay="0.4s">
             <div class="section-heading">
               <h2>The Court</h2>
+              <p>Click on character photos for more info!</p>
               <i class="fa fa-2x fa-angle-down"></i>
             </div>
           </div>
@@ -14,7 +15,7 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <!-- <div class="container">
 
     <div class="row">
       <div class="col-lg-2 col-lg-offset-5">
@@ -22,21 +23,53 @@
       </div>
     </div>
     <div class="row">
-      <!-- Start Repeat -->
-      <div ng-show="!item.hide" ng-repeat="item in profiles track by item.name" class="col-xs-6 col-sm-3 col-md-3">
+      <div ng-show="!item.hide" ng-repeat="item in profiles track by item.name" class="col-xs-4 col-sm-2">
         <div class="wow bounceInUp" data-wow-delay="0.2s">
           <div class="team boxed-grey">
             <div class="inner">
               <h5>{{item.name}}</h5>
+              <div class="avatar"><img src={{item.photo}} alt="" class="img-thumbnail img-responsive img-circle" /></div>
               <p class="subtitle">{{item.description}}</p>
-              <div class="avatar"><img src={{item.photo}} alt="" class="img-responsive img-circle" /></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="clearfix"></div>
-      <!-- End Repeat -->
-    </div> 
-  </div>
+    </div>
+  </div> -->
 </section>
 <!-- /Section: court -->
+
+<div class="container"> 
+  <div class="row">
+    <div ng-show="!item.hide" ng-repeat="item in profiles track by item.name" class="col-xs-4">
+      <a href="" ng-click="showUserModal($index)"><img src="{{item.photo}}" class="img img-thumbnail img-responsive img-circle full-width">
+      </a>
+    </div>
+  </div>
+  
+  <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header bg-info">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel" class="text-center"></h3>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-10 col-xs-offset-1"><img src="{{currUser.photo}}" class="img-responsive"></div>
+            </div>
+            <hr>
+            <div class="row">
+              <h4 class="text-justify">{{currUser.description}}</h4>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="modal-footer bg-info">
+            <button class="btn btn-lg btn-default center-block" data-dismiss="modal" aria-hidden="true">Okay!</button>
+        </div> -->
+    </div>
+    </div>
+  </div><!--/modal-->
+  
+</div><!--/container-->
