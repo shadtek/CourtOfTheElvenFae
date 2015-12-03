@@ -477,7 +477,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 }
 
 .company-social li{
-    display: inline-block;
+  display: inline-block;
 	margin:0 !important;
 	padding:0;
 }
