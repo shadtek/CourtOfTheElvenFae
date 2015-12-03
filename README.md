@@ -7,4 +7,4 @@ The files are served up using this repo: https://github.com/shadtek/static-serve
 and delpoyed using this repo: https://github.com/shadtek/deployment-digitalocean
 
 Stuff I want to do: 
-1. Let the admin toggle the call to action button on the home page.
+1. Let the admin toggle the call to action button on the home page. It can be done as a ui-view like the court.
