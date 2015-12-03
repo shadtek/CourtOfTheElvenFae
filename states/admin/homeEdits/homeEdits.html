@@ -6,6 +6,18 @@
 </form>
 <br/>
 <form ng-submit="updateMainInfo()">
+  <textarea rows="1" ng-model="mainInfo.callToActionUrl" placeholder="Web address you want people to go to:"></textarea>
+  <button class="btn-mini">Update</button>
+  <span>Call to action button url</span>
+</form>
+<br/>
+<form ng-submit="updateMainInfo()">
+  <textarea rows="1" ng-model="mainInfo.callToActionText" placeholder="Text you want displayed for the call to action:"></textarea>
+  <button class="btn-mini">Update</button>
+  <span>Call to Action button text</span>
+</form>
+<hr>
+<form ng-submit="updateMainInfo()">
   <input ng-model="mainInfo.flagTitle" />
   <button class="btn-mini">Update</button>
   <span>Flag Title</span>
@@ -15,7 +27,7 @@
   <button class="btn-mini">Update</button>
   <span>Flag Text</span>
 </form>
-<br/>
+<hr>
 <form ng-submit="updateMainInfo()">
   <input ng-model="mainInfo.starTitle" />
   <button class="btn-mini">Update</button>
@@ -26,7 +38,7 @@
   <button class="btn-mini">Update</button>
   <span>Star Text</span>
 </form>
-<br/>
+<hr>
 <form ng-submit="updateMainInfo()">
   <input ng-model="mainInfo.gemTitle" />
   <button class="btn-mini">Update</button>
@@ -37,7 +49,7 @@
   <button class="btn-mini">Update</button>
   <span>Gem Text</span>
 </form>
-<br/>
+<hr>
 <form ng-submit="updateMainInfo()">
   <input ng-model="mainInfo.piperTitle" />
   <button class="btn-mini">Update</button>
@@ -48,7 +60,7 @@
   <button class="btn-mini">Update</button>
   <span>Piper Text</span>
 </form>
-<br>
+<hr>
 <form ng-submit="updateMainInfo()">
   <input ng-model="mainInfo.profilesSubtitle" />
   <button class="btn-mini">Update</button>
