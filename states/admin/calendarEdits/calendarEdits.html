@@ -1,0 +1,34 @@
+<h3>Calendar Edits</h3>
+<div class="flex edit-container">
+<!-- Start Add -->
+  <div class="flex flex-between" ng-submit="addCalendar(item)">
+    <div class="flex flex-column input-boxes">
+      <input ng-model="item.eventDate" placeholder="Event date / text"/>
+      <input ng-model="item.url" placeholder="Calendar item URL"/>
+      <input ng-model="item.linkText" placeholder="Link text you want to show"/>
+      <textarea ng-model="item.eventInfo" rows="4" placeholder="Event Info"></textarea>
+    </div>
+    <div>
+      <button class="btn-mini btn-info" ng-click="addCalendar(item)">Add New</button>
+    </div>
+  </div>
+  <br>
+  <!-- End Add -->
+  <!-- Start Repeat -->
+  <div ng-repeat="item in calendar track by $index" class="flex flex-between">
+    <div class="flex flex-column input-boxes">
+      <input ng-model="item.eventDate" placeholder="Event date / text"/>
+      <input ng-model="item.url" placeholder="Calendar item URL"/>
+      <input ng-model="item.linkText" placeholder="Link text you want to show"/>
+      <textarea ng-model="item.eventInfo" rows="4" placeholder="Event Info"></textarea>
+    </div>
+    <div>
+      <button class="btn-mini btn-success" ng-click="updateCalendar(item)">Update</button>
+      <button class="btn-mini btn-warning" ng-click="toggleCalendarHide(item)">Hide</button>
+      <button class="btn-mini btn-danger" ng-click="removeCalendar(item)">Delete</button>
+      <h3 ng-hide="!item.hide">Hidden</h3>
+      <p ng-hide="item.hide">Shown</p>
+    </div>
+  </div>
+  <!-- End Repeat -->
+</div>

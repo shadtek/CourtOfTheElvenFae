@@ -6,7 +6,7 @@
 </form>
 <br/>
 <form ng-submit="updateMainInfo()">
-  <textarea rows="1" ng-model="mainInfo.callToAction.url" placeholder="Web address you want people to go to:"></textarea>
+  <textarea rows="2" ng-model="mainInfo.callToAction.url" placeholder="Web address you want people to go to:"></textarea>
   <button class="btn-mini">Update</button>
   <span>Call to action button full url</span>
 </form>
@@ -16,11 +16,6 @@
   <button class="btn-mini">Update</button>
   <span>Call to Action button text</span>
 </form>
-<!-- <div>
-  <button class="btn-mini btn-warning" ng-click="toggleMainInfoHide()">Toggle Call to Action Button</button>
-  <h3 ng-hide="!item.hide">Hidden</h3>
-  <p ng-hide="item.hide">Shown</p>
-</div> -->
 <hr>
 <form ng-submit="updateMainInfo()">
   <input ng-model="mainInfo.flagTitle" />

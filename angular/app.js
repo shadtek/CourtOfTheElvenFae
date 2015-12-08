@@ -22,7 +22,13 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           }
         },
         "calendar@home": {
-          templateUrl: "states/home/calendar.html"
+          templateUrl: "states/home/calendar.html",
+          controller: 'calendarCtrl',
+          resolve: {
+            calendarRef: function(firebaseService, $state){
+              return firebaseService.getCalendar();
+            }
+          }
         }
       },
       resolve: {
@@ -86,6 +92,19 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         },
         profilesRef: function(firebaseService, $state){
           return firebaseService.getProfiles();
+        }
+      }
+    })
+    .state('admin.edits.calendarEdits', {
+      url: "/calendar-edits",
+      templateUrl: "states/admin/calendarEdits/calendarEdits.html",
+      controller: 'calendarEditsCtrl',
+      resolve: {
+        loggedIn: function(authService){
+          return authService.checkAuth();
+        },
+        calendarRef: function(firebaseService, $state){
+          return firebaseService.getCalendar();
         }
       }
     })
