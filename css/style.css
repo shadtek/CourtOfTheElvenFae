@@ -793,7 +793,7 @@ Parallax
 	
 }
 
-/* Overrides for admin edits */
+/* Admin edits */
 
 .flex {
   display: flex;
@@ -828,16 +828,22 @@ input, textarea {
   overflow: hidden;
 }
 
-/* Override for login page form */
+/* Login page form */
 .login-form {
   margin-bottom: 20px;
 }
 
-/* Modal and Court overrides */
+/* Modal and Court */
 #myModal .img-responsive {
   width: 100%;
 }
 
 #myModalLabel {
   margin-bottom: 0px;
+}
+
+/* Developer Credit */
+
+.dev-credit {
+  text-align: center;
 }
