@@ -1,7 +1,7 @@
 /* ==== Google font ==== */
 /*@import url('http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Montserrat:700|Merriweather:400italic');*/
 * {
-  font-size: xx-large;
+  font-size: 1em;
 }
 body {
     width: 100%;
@@ -28,14 +28,13 @@ h6 {
    font-family: Montserrat,sans-serif; */
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: xx-large;
+    font-size: 3em;
 }
 
 p {
     margin: 0 0 20px;
-    font-size: 16px;
+    font-size: 2.5em;
     line-height: 1.6em;
-    font-size: x-large;
 }
 
 p.lead {
@@ -71,14 +70,14 @@ a:focus {
 .navbar-brand {
   height: 40px;
   padding: 5px 15px;
-  font-size: 18px;
-  line-height: 1em;
+  font-size: 2em;
+  line-height: 1.5em;
 }
 
 .navbar-brand h1{
 	color: #fff;
-  font-size: 20px;
-  line-height: 40px;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 .navbar-brand:focus {
@@ -86,16 +85,16 @@ a:focus {
 }
 
 .nav.navbar-nav {
-    background-color: rgba(255,255,255,.4);
+  background-color: rgba(255,255,255,.8);
 }
 
 .navbar-custom.top-nav-collapse .nav.navbar-nav {
-    background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0);
 }
 
 
 .navbar-custom ul.nav li a {
-	font-size: 12px;
+	font-size: 2em;
 	letter-spacing: 1px;
     color: #444;
 	/*text-transform: uppercase;*/
@@ -155,7 +154,7 @@ a:focus {
 
 .navbar-toggle {
     padding: 4px 6px;
-    font-size: 14px;
+    font-size: 1.5em;
     color: #fff;
 }
 
@@ -321,14 +320,15 @@ hr {
 
 .intro .page-scroll {
 	text-align: center;
+  font-size: 2em;
 }
 
 .brand-heading {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .intro-text {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .intro .slogan h2 {
@@ -352,6 +352,14 @@ hr {
 	text-shadow: -1px 1px 1px #000;
 }
 
+.intro .slogan a {
+  /*font-size: 2em;*/
+  /*font-weight: 600;*/
+}
+
+.call-to-action {
+  background-color: #D9EDF7;
+}
 
 /* ===========================
 --- About
@@ -463,6 +471,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 
 .widget-contact {
 	text-align: left;
+  font-size: 2em;
 }
 
 
@@ -770,7 +779,7 @@ Parallax
 @media (max-width:480px) {
 
 	.navbar-custom .nav.navbar-nav {
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba(255,255,255,.8);
 	}
 	
 	.navbar.navbar-custom.navbar-fixed-top {
@@ -820,6 +829,7 @@ Parallax
 
 input, textarea {
   width: 450px;
+  max-width: 100%;
 }
 
 .thumbnail {
@@ -847,3 +857,20 @@ input, textarea {
 .dev-credit {
   text-align: center;
 }
+
+/* Forms */
+
+.form-control, .btn, .btn-mini {
+  font-size: 1.7em
+}
+
+span, textarea, input {
+  font-size: 1.6em;
+}
+
+.blue-bar {
+  border-top: 2px solid #7AB8F1;
+}
+
+/* Address */
+
