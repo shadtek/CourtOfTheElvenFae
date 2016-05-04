@@ -864,6 +864,15 @@ input, textarea {
 }
 
 /* Modal and Court */
+.photo-frame{
+  height:30vw;
+}
+
+.photo-frame img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
 #myModal .img-responsive {
   width: 100%;
 }

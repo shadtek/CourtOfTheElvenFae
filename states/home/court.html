@@ -1,10 +1,12 @@
 <div class="container"> 
   <div class="row">
-    <div ng-show="!item.hide" ng-repeat="item in profiles track by item.name" class="col-xs-4">
-      <a href="" ng-click="showUserModal($index)"><img src="{{item.photo}}" class="img img-thumbnail img-responsive img-circle full-width"></a>
+    <div ng-show="!item.hide" ng-repeat="item in profiles track by item.name" class="col-xs-4 photo-frame">
+      <a href="" ng-click="showUserModal($index)">
+      <img src="{{item.photo}}" class="img img-thumbnail img-responsive img-circle full-width">
+      </a>
     </div>
   </div>
-  
+  <!-- modal -->
   <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
@@ -25,6 +27,7 @@
         </div>
     </div>
     </div>
-  </div><!--/modal-->
+  </div>
+  <!--/modal-->
   
 </div><!--/container-->
