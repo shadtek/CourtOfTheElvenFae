@@ -15,9 +15,10 @@
   <br>
   <!-- End Add -->
   <!-- Start Repeat -->
-  <div ng-repeat="item in profiles track by item.name" class="flex flex-between">
+  <div ng-repeat="item in profiles | orderBy: 'name' " class="flex flex-between">
     <div class="flex flex-column input-boxes">
       <input ng-model="item.name" placeholder="Name"/>
+      <input></input>
       <input ng-model="item.photo" placeholder="Photo URL: Please use square pictures"/>
       <div class="thumbnail"><img src={{item.photo}} /></div>
       <textarea ng-model="item.description" rows="4" placeholder="Description"></textarea>
