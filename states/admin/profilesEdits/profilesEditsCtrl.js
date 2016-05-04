@@ -12,6 +12,7 @@ app.controller('profilesEditsCtrl', function($scope, firebaseService, profilesRe
   }
 
   $scope.updateProfiles = function(item){
+    item.rank = item.rank2;
     $scope.profiles.$save(item);
     console.log("Updated")
   };

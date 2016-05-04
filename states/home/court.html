@@ -1,6 +1,6 @@
 <div class="container"> 
   <div class="row">
-    <div ng-show="!item.hide" ng-repeat="item in profiles | orderBy: 'name' " class="col-xs-4 photo-frame">
+    <div ng-show="!item.hide" ng-repeat="item in profiles | orderBy: 'rank' " class="col-xs-4 photo-frame">
       <a href="" ng-click="showUserModal(item)">
       <img src="{{item.photo}}" class="img img-thumbnail img-responsive img-circle full-width">
       </a>
