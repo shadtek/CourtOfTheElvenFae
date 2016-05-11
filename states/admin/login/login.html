@@ -1,8 +1,8 @@
 <h2 class="text-center">Login</h2>
 <form class="login-form col-xs-8 col-xs-offset-2" ng-submit="login()">
   <p ng-show="error" class="text-danger">{{ error }}</p>
-  <input type="email" placeholder="Email" class="form-control" ng-model="details.email" required/><br>
-  <input type="password" placeholder="Password" class="form-control" ng-model="details.password" required/><br>
+  <input name="email" type="email" placeholder="Email" class="form-control" ng-model="details.email" required/><br>
+  <input name="password" type="password" placeholder="Password" class="form-control" ng-model="details.password" required/><br>
   <button class="btn btn-success">Sign In</button>
 </form>
 

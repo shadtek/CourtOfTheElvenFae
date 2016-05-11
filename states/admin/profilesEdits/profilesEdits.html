@@ -4,6 +4,7 @@
   <div class="flex flex-between">
     <div class="flex flex-column input-boxes">
       <input ng-model="item.name" placeholder="Name"/>
+      <input ng-model="item.rank" type="number" placeholder="Numerical rank"/>
       <input ng-model="item.photo" placeholder="Photo URL: Please use square pictures"/>
       <div class="thumbnail"><img src={{item.photo}} /></div>
       <textarea ng-model="item.description" rows="4" placeholder="Description"></textarea>
